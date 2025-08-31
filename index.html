@@ -1,211 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Landing Page</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #000;
-      color: white;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePro Formula - Free Course for Philippines</title>
+    
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Analytics -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "t0vwoh8vuf");
+    </script>
 
-    /* Header */
-    header {
-      position: relative;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      padding: 100px 20px 50px;
-      overflow: hidden;
-    }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PCJJ337XT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2PCJJ337XT');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #000;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    header h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.4;
-    }
+        /* Enhanced Animated Background - EXACT COPY FROM INDEX.HTML */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            overflow: hidden;
+        }
+        
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.8) 0%, rgba(217, 119, 6, 0.1) 100%);
+            border-radius: 50%;
+            animation: float 12s infinite ease-in-out;
+            box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+        }
+        
+        .particle:nth-child(1) { width: 8px; height: 8px; left: 10%; animation-delay: 0s; animation-duration: 8s; }
+        .particle:nth-child(2) { width: 12px; height: 12px; left: 20%; animation-delay: 1.5s; animation-duration: 10s; }
+        .particle:nth-child(3) { width: 6px; height: 6px; left: 30%; animation-delay: 3s; animation-duration: 9s; }
+        .particle:nth-child(4) { width: 10px; height: 10px; left: 40%; animation-delay: 4.5s; animation-duration: 11s; }
+        .particle:nth-child(5) { width: 14px; height: 14px; left: 50%; animation-delay: 6s; animation-duration: 7s; }
+        .particle:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-delay: 7.5s; animation-duration: 12s; }
+        .particle:nth-child(7) { width: 11px; height: 11px; left: 70%; animation-delay: 9s; animation-duration: 8s; }
+        .particle:nth-child(8) { width: 9px; height: 9px; left: 80%; animation-delay: 10.5s; animation-duration: 10s; }
+        .particle:nth-child(9) { width: 13px; height: 13px; left: 85%; animation-delay: 2s; animation-duration: 9s; }
+        .particle:nth-child(10) { width: 5px; height: 5px; left: 90%; animation-delay: 3.5s; animation-duration: 11s; }
+        
+        @keyframes float {
+            0% { 
+                transform: translateY(100vh) rotate(0deg) scale(0.5); 
+                opacity: 0; 
+                box-shadow: 0 0 5px rgba(217, 119, 6, 0.1);
+            }
+            5% { 
+                opacity: 1; 
+                box-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+            }
+            50% { 
+                transform: translateY(50vh) rotate(180deg) scale(1.2); 
+                opacity: 1; 
+                box-shadow: 0 0 25px rgba(217, 119, 6, 0.5);
+            }
+            95% { 
+                opacity: 1; 
+                box-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+            }
+            100% { 
+                transform: translateY(-100px) rotate(360deg) scale(0.5); 
+                opacity: 0;
+                box-shadow: 0 0 5px rgba(217, 119, 6, 0.1);
+            }
+        }
 
-    /* Floating money symbols */
-    .money-particles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
+        /* Money symbols floating animation - EXACT COPY FROM INDEX.HTML */
+        .money-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
 
-    .money-symbol {
-      position: absolute;
-      font-size: 24px;
-      color: rgba(217, 119, 6, 0.6);
-      animation: moneyFloat 12s infinite linear;
-    }
+        .money-symbol {
+            position: absolute;
+            font-size: 24px;
+            color: rgba(217, 119, 6, 0.6);
+            animation: moneyFloat 15s infinite linear;
+            text-shadow: 0 0 10px rgba(217, 119, 6, 0.8);
+            /* Hide them completely initially */
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(150vh);
+        }
 
-    .money-symbol:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .money-symbol:nth-child(2) { left: 30%; animation-delay: 3s; }
-    .money-symbol:nth-child(3) { left: 50%; animation-delay: 6s; }
-    .money-symbol:nth-child(4) { left: 70%; animation-delay: 9s; }
-    .money-symbol:nth-child(5) { left: 85%; animation-delay: 12s; }
+        .money-symbol:nth-child(1) { left: 5%; animation-delay: 0s; }
+        .money-symbol:nth-child(2) { left: 15%; animation-delay: 3s; }
+        .money-symbol:nth-child(3) { left: 25%; animation-delay: 6s; }
+        .money-symbol:nth-child(4) { left: 35%; animation-delay: 9s; }
+        .money-symbol:nth-child(5) { left: 45%; animation-delay: 12s; }
 
-    .money-symbol:nth-child(1)::before { content: '$'; }
-    .money-symbol:nth-child(2)::before { content: '₱'; }
-    .money-symbol:nth-child(3)::before { content: '$'; }
-    .money-symbol:nth-child(4)::before { content: '₱'; }
-    .money-symbol:nth-child(5)::before { content: '$'; }
+        .money-symbol:nth-child(1)::before { content: '$'; }
+        .money-symbol:nth-child(2)::before { content: '₱'; }
+        .money-symbol:nth-child(3)::before { content: '$'; }
+        .money-symbol:nth-child(4)::before { content: '₱'; }
+        .money-symbol:nth-child(5)::before { content: '$'; }
 
-    @keyframes moneyFloat {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      20% { opacity: 1; }
-      50% { transform: translateY(50vh) rotate(180deg); opacity: 1; }
-      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-    }
+        @keyframes moneyFloat {
+            0% { 
+                transform: translateY(150vh) rotate(0deg); 
+                opacity: 0; 
+                visibility: hidden;
+                font-size: 16px;
+            }
+            8% { 
+                opacity: 0; 
+                visibility: visible;
+                font-size: 20px;
+            }
+            20% { 
+                opacity: 0.8; 
+                visibility: visible;
+                font-size: 24px;
+            }
+            50% { 
+                transform: translateY(50vh) rotate(180deg); 
+                opacity: 1; 
+                visibility: visible;
+                font-size: 32px;
+            }
+            80% { 
+                opacity: 0.8; 
+                visibility: visible;
+                font-size: 24px;
+            }
+            92% { 
+                opacity: 0; 
+                visibility: visible;
+                font-size: 20px;
+            }
+            100% { 
+                transform: translateY(-150px) rotate(360deg); 
+                opacity: 0;
+                visibility: hidden;
+                font-size: 16px;
+            }
+        }
 
-    /* Image */
-    .thumbnail {
-      margin: 40px auto;
-      max-width: 100%;
-      width: 1280px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
 
-    /* Lead form */
-    .lead-form {
-      max-width: 400px;
-      margin: 0 auto 60px;
-      background: linear-gradient(135deg, #d97706 0%, #92400e 100%);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
-      text-align: left;
-    }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            background: linear-gradient(135deg, #d97706 0%, #92400e 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+            animation: pulse 3s infinite;
+        }
 
-    .lead-form label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 600;
-      color: white;
-    }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(217, 119, 6, 0.5); }
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #ffffff 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+            line-height: 1.6;
+            color: #f8f9fa;
+            font-weight: 500;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .lead-form input {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
+        /* Course Preview */
+        .course-preview {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            margin: 50px auto;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
 
-    .lead-form button {
-      width: 100%;
-      padding: 15px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      background: white;
-      color: #d97706;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+        .course-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.2);
+        }
 
-    .lead-form button:hover {
-      background: #f8f8f8;
-      transform: scale(1.03);
-    }
+        .course-thumbnail {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
 
-    .success-message {
-      display: none;
-      text-align: center;
-      font-weight: 600;
-      margin-top: 20px;
-      color: #27ae60;
-    }
+        .course-thumbnail:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(217, 119, 6, 0.3);
+        }
 
-    .error-message {
-      display: none;
-      text-align: center;
-      font-weight: 600;
-      margin-top: 20px;
-      color: #e74c3c;
-    }
-  </style>
+        .course-title {
+            color: #d97706;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .course-description {
+            color: #ecf0f1;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Signup Form Enhanced */
+        .signup-form {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 450px;
+            margin: 50px auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .signup-form::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(217,119,6,0.2), transparent, rgba(217,119,6,0.1), transparent);
+            animation: rotateGlow 8s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateGlow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h3 {
+            color: white;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .form-header p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .urgency-text {
+            color: #f59e0b;
+            font-weight: 700;
+            font-size: 0.95rem;
+            background: rgba(245, 158, 11, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            animation: urgentPulse 2s infinite;
+        }
+
+        @keyframes urgentPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #d97706;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 20px rgba(217, 119, 6, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #d97706 0%, #92400e 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(217, 119, 6, 0.6);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .form-footer p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Success/Error Messages */
+        .message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+        }
+
+        .success-message {
+            background: rgba(39, 174, 96, 0.2);
+            border: 1px solid #27ae60;
+            color: #27ae60;
+        }
+
+        .error-message {
+            background: rgba(231, 76, 60, 0.2);
+            border: 1px solid #e74c3c;
+            color: #e74c3c;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .signup-form {
+                padding: 30px 25px;
+                margin: 30px 20px;
+            }
+            
+            .course-preview {
+                padding: 25px;
+                margin: 30px 20px;
+            }
+
+            .form-header h3 {
+                font-size: 1.4rem;
+            }
+
+            .submit-btn {
+                padding: 16px;
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="money-particles">
+                <div class="money-symbol"></div>
+                <div class="money-symbol"></div>
+                <div class="money-symbol"></div>
+                <div class="money-symbol"></div>
+                <div class="money-symbol"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🇵🇭 FREE FOR PHILIPPINES ONLY</div>
+                <h1>The Course That Changes Everything</h1>
+                <p class="subtitle">Learn the exact system my students used to make $2M+. Completely free. No catch. Just value.</p>
+                
+                <!-- Course Preview -->
+                <div class="course-preview">
+                    <img src="thumbnail General.png" alt="ePro Formula Free Course" class="course-thumbnail">
+                    <h3 class="course-title">Complete Etsy Dropshipping Masterclass</h3>
+                    <p class="course-description">Everything you need to start and scale your first profitable Etsy shop from scratch.</p>
+                </div>
 
-  <header>
-    <div class="money-particles">
-      <div class="money-symbol"></div>
-      <div class="money-symbol"></div>
-      <div class="money-symbol"></div>
-      <div class="money-symbol"></div>
-      <div class="money-symbol"></div>
-    </div>
-    <h1>for the course that might change your life ! (probably not, but try it's free)</h1>
-  </header>
+                <!-- Signup Form -->
+                <div class="signup-form">
+                    <div class="form-header">
+                        <h3>🎯 Get Instant Access</h3>
+                        <p>Join the first 100 Filipinos to access this system</p>
+                        <div class="urgency-text">⏰ Limited Time Only</div>
+                    </div>
+                    
+                    <form id="leadForm">
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter your first name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            🚀 GET MY FREE ACCESS NOW
+                        </button>
+                        
+                        <div class="form-footer">
+                            <p>✅ Instant access • ✅ No credit card required • ✅ 100% Free</p>
+                        </div>
+                        
+                        <div class="message success-message" id="successMessage">
+                            ✅ Success! Redirecting you to the course...
+                        </div>
+                        <div class="message error-message" id="errorMessage">
+                            ❌ Something went wrong. Please try again.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <main>
-    <img src="thumbnail General.png" alt="Course Thumbnail" class="thumbnail">
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Validation
+            if (!firstName || !email) {
+                errorMsg.textContent = '❌ Please fill in your first name and email address.';
+                errorMsg.style.display = 'block';
+                successMsg.style.display = 'none';
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                errorMsg.textContent = '❌ Please enter a valid email address.';
+                errorMsg.style.display = 'block';
+                successMsg.style.display = 'none';
+                return;
+            }
+            
+            // Show loading state
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '⏳ SECURING YOUR SPOT...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            
+            // Hide previous messages
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            // Send to Make.com webhook
+            fetch('https://hook.eu2.make.com/uy29olvlhoccpxch6ivc9rxfuot0r2g9', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    firstName: firstName,
+                    email: email,
+                    phone: phone || '',
+                    source: 'simple_landing_page',
+                    timestamp: new Date().toISOString()
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success - show message and redirect
+                    submitBtn.textContent = '✅ SPOT SECURED!';
+                    submitBtn.style.background = '#27ae60';
+                    submitBtn.style.opacity = '1';
+                    successMsg.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        window.location.href = 'https://aetophis.systeme.io/freecourse';
+                    }, 2000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Reset button on error
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                errorMsg.textContent = '❌ Something went wrong. Please try again or contact support.';
+                errorMsg.style.display = 'block';
+            });
+        });
 
-    <form class="lead-form" id="leadForm">
-      <label for="fname">First Name *</label>
-      <input type="text" id="fname" name="fname" required>
-
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone (optonial)</label>
-      <input type="tel" id="phone" name="phone">
-
-      <button type="submit">Submit</button>
-      <div class="success-message" id="successMessage">✅ Your info has been sent!</div>
-      <div class="error-message" id="errorMessage">❌ Something went wrong. Try again.</div>
-    </form>
-  </main>
-
-  <script>
-    document.getElementById('leadForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const firstName = document.getElementById('fname').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-
-      fetch("https://hook.eu2.make.com/uy29olvlhoccpxch6ivc9rxfuot0r2g9", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: firstName,
-          email: email,
-          phone: phone,
-          source: "simple_landing_page",
-          timestamp: new Date().toISOString()
-        }),
-      })
-      .then(response => {
-        if (response.ok) {
-          document.getElementById('successMessage').style.display = 'block';
-          document.getElementById('errorMessage').style.display = 'none';
-          document.getElementById('leadForm').reset();
-        } else {
-          throw new Error('Network error');
-        }
-      })
-      .catch(error => {
-        document.getElementById('errorMessage').style.display = 'block';
-        document.getElementById('successMessage').style.display = 'none';
-      });
-    });
-  </script>
-
+        // Add some interactive effects
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+                this.parentElement.style.transition = 'all 0.3s ease';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
 </html>
