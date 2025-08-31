@@ -238,77 +238,66 @@
             50% { transform: scale(1.05); box-shadow: 0 8px 25px rgba(217, 119, 6, 0.5); }
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+        /* Hero Form - Make it the star of the show */
+        .hero-form {
+            margin: 20px auto 50px;
+            max-width: 500px;
+            transform: scale(1.1);
+        }
+
+        .hero-form .form-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -2px;
+            letter-spacing: -1px;
             background: linear-gradient(135deg, #ffffff 0%, #d97706 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
-        
-        .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-            opacity: 0.9;
-            line-height: 1.6;
-            color: #f8f9fa;
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
             font-weight: 500;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.5;
+            margin-bottom: 20px;
         }
 
-        /* Course Preview */
+        /* Course Preview - Smaller and secondary */
         .course-preview {
-            background: rgba(255,255,255,0.08);
-            padding: 30px;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(217, 119, 6, 0.3);
-            margin: 50px auto;
-            max-width: 500px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 1px solid rgba(217, 119, 6, 0.2);
+            margin: 30px auto;
+            max-width: 400px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-        }
-
-        .course-preview:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.2);
         }
 
         .course-thumbnail {
             width: 100%;
-            max-width: 400px;
+            max-width: 300px;
             height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
-            margin-bottom: 20px;
-        }
-
-        .course-thumbnail:hover {
-            transform: scale(1.02);
-            box-shadow: 0 15px 40px rgba(217, 119, 6, 0.3);
+            margin-bottom: 15px;
         }
 
         .course-title {
             color: #d97706;
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         .course-description {
             color: #ecf0f1;
-            font-size: 1rem;
-            opacity: 0.9;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
         /* Signup Form Enhanced */
@@ -549,21 +538,12 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">🇵🇭 FREE FOR PHILIPPINES ONLY</div>
-                <h1>The Course That Changes Everything</h1>
-                <p class="subtitle">Learn the exact system my students used to make $2M+. Completely free. No catch. Just value.</p>
                 
-                <!-- Course Preview -->
-                <div class="course-preview">
-                    <img src="thumbnail General.png" alt="ePro Formula Free Course" class="course-thumbnail">
-                    <h3 class="course-title">Complete Etsy Dropshipping Masterclass</h3>
-                    <p class="course-description">Everything you need to start and scale your first profitable Etsy shop from scratch.</p>
-                </div>
-
-                <!-- Signup Form -->
-                <div class="signup-form">
+                <!-- Lead Form as Hero Element -->
+                <div class="signup-form hero-form">
                     <div class="form-header">
-                        <h3>🎯 Get Instant Access</h3>
-                        <p>Join the first 100 Filipinos to access this system</p>
+                        <h1>🎯 Get Instant Access</h1>
+                        <p class="hero-subtitle">Join the first 100 Filipinos to access the system that made students $2M+</p>
                         <div class="urgency-text">⏰ Limited Time Only</div>
                     </div>
                     
@@ -598,6 +578,13 @@
                             ❌ Something went wrong. Please try again.
                         </div>
                     </form>
+                </div>
+
+                <!-- Course Preview Below Form -->
+                <div class="course-preview">
+                    <img src="thumbnail General.png" alt="ePro Formula Free Course" class="course-thumbnail">
+                    <h3 class="course-title">Complete Etsy Dropshipping Masterclass</h3>
+                    <p class="course-description">Everything you need to start and scale your first profitable Etsy shop from scratch.</p>
                 </div>
             </div>
         </div>
